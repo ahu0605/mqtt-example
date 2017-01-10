@@ -1,0 +1,296 @@
+0    [main] INFO  Server  - Persistent store file: null
+280  [main] INFO  ResourceAuthenticator  - Loading password file config/password_file.conf
+1513 [main] INFO  NettyAcceptor  - Server binded host: 0.0.0.0, port: 1883
+1513 [main] INFO  NettyAcceptor  - Server binded host: 0.0.0.0, port: 8080
+0    [main] INFO  Server  - Persistent store file: null
+202  [main] INFO  ResourceAuthenticator  - Loading password file config/password_file.conf
+1076 [main] INFO  NettyAcceptor  - Server binded host: 0.0.0.0, port: 1883
+1092 [main] INFO  NettyAcceptor  - Server binded host: 0.0.0.0, port: 8080
+0    [main] INFO  Server  - Persistent store file: null
+203  [main] INFO  ResourceAuthenticator  - Loading password file config/password_file.conf
+1030 [main] INFO  NettyAcceptor  - Server binded host: 0.0.0.0, port: 1883
+1030 [main] INFO  NettyAcceptor  - Server binded host: 0.0.0.0, port: 8080
+1030 [main] INFO  DefaultMoquetteSslContextCreator  - Starting SSL using keystore at serverkeystore.jks
+1077 [main] INFO  DefaultMoquetteSslContextCreator  - jks not found in bundled resources, try on the filesystem
+1077 [main] WARN  DefaultMoquetteSslContextCreator  - File C:\Users\zxy\workspace4eclipse\moquette\run\bin\serverkeystore.jks doesn't exists
+1654 [main] INFO  NettyAcceptor  - Starting SSL on port 8883
+1669 [main] INFO  NettyAcceptor  - Server binded host: 0.0.0.0, port: 8883
+1669 [main] INFO  NettyAcceptor  - SSL websocket is disabled because there is no value in properties for key secure_websocket_port
+0    [main] INFO  Server  - Persistent store file: null
+176  [main] INFO  ResourceAuthenticator  - Loading password file config/password_file.conf
+1018 [main] INFO  NettyAcceptor  - Server binded host: 0.0.0.0, port: 1883
+1018 [main] INFO  NettyAcceptor  - Server binded host: 0.0.0.0, port: 8080
+1018 [main] INFO  DefaultMoquetteSslContextCreator  - Starting SSL using keystore at serverkeystore.jks
+1018 [main] INFO  DefaultMoquetteSslContextCreator  - jks not found in bundled resources, try on the filesystem
+1018 [main] INFO  DefaultMoquetteSslContextCreator  - Using C:\Users\zxy\workspace4eclipse\moquette\run\bin\serverkeystore.jks 
+1455 [main] INFO  NettyAcceptor  - Starting SSL on port 8883
+1455 [main] INFO  NettyAcceptor  - Server binded host: 0.0.0.0, port: 8883
+1455 [main] INFO  NettyAcceptor  - SSL websocket is disabled because there is no value in properties for key secure_websocket_port
+2442451 [nioEventLoopGroup-3-1] ERROR NettyMQTTHandler  - Ugly error on networking
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLException: Received fatal alert: internal_error
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:442)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:351)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:351)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:351)
+	at io.moquette.server.netty.metrics.BytesMetricsHandler.channelRead(BytesMetricsHandler.java:47)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:351)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:129)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:651)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:574)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:488)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:450)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: javax.net.ssl.SSLException: Received fatal alert: internal_error
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:208)
+	at sun.security.ssl.SSLEngineImpl.fatal(SSLEngineImpl.java:1639)
+	at sun.security.ssl.SSLEngineImpl.fatal(SSLEngineImpl.java:1607)
+	at sun.security.ssl.SSLEngineImpl.recvAlert(SSLEngineImpl.java:1776)
+	at sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:1068)
+	at sun.security.ssl.SSLEngineImpl.readNetRecord(SSLEngineImpl.java:890)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:764)
+	at javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:624)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1097)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:968)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:902)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	... 28 more
+2442482 [nioEventLoopGroup-3-2] ERROR NettyMQTTHandler  - Ugly error on networking
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLException: Received fatal alert: internal_error
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:442)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:351)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:351)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:351)
+	at io.moquette.server.netty.metrics.BytesMetricsHandler.channelRead(BytesMetricsHandler.java:47)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:351)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:129)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:651)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:574)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:488)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:450)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: javax.net.ssl.SSLException: Received fatal alert: internal_error
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:208)
+	at sun.security.ssl.SSLEngineImpl.fatal(SSLEngineImpl.java:1639)
+	at sun.security.ssl.SSLEngineImpl.fatal(SSLEngineImpl.java:1607)
+	at sun.security.ssl.SSLEngineImpl.recvAlert(SSLEngineImpl.java:1776)
+	at sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:1068)
+	at sun.security.ssl.SSLEngineImpl.readNetRecord(SSLEngineImpl.java:890)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:764)
+	at javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:624)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1097)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:968)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:902)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	... 28 more
+0    [main] INFO  Server  - Persistent store file: null
+297  [main] INFO  ResourceAuthenticator  - Loading password file config/password_file.conf
+1326 [main] INFO  NettyAcceptor  - Server binded host: 0.0.0.0, port: 1883
+1326 [main] INFO  NettyAcceptor  - Server binded host: 0.0.0.0, port: 8080
+1326 [main] INFO  DefaultMoquetteSslContextCreator  - Starting SSL using keystore at serverkeystore.jks
+1326 [main] INFO  DefaultMoquetteSslContextCreator  - jks not found in bundled resources, try on the filesystem
+1326 [main] INFO  DefaultMoquetteSslContextCreator  - Using C:\Users\zxy\workspace4eclipse\moquette\run\bin\serverkeystore.jks 
+1825 [main] INFO  NettyAcceptor  - Starting SSL on port 8883
+1826 [main] INFO  NettyAcceptor  - Server binded host: 0.0.0.0, port: 8883
+1826 [main] INFO  NettyAcceptor  - SSL websocket is disabled because there is no value in properties for key secure_websocket_port
+32193 [nioEventLoopGroup-3-1] ERROR NettyMQTTHandler  - Ugly error on networking
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLException: Received fatal alert: internal_error
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:442)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:351)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:351)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:351)
+	at io.moquette.server.netty.metrics.BytesMetricsHandler.channelRead(BytesMetricsHandler.java:47)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:351)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:129)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:651)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:574)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:488)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:450)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: javax.net.ssl.SSLException: Received fatal alert: internal_error
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:208)
+	at sun.security.ssl.SSLEngineImpl.fatal(SSLEngineImpl.java:1639)
+	at sun.security.ssl.SSLEngineImpl.fatal(SSLEngineImpl.java:1607)
+	at sun.security.ssl.SSLEngineImpl.recvAlert(SSLEngineImpl.java:1776)
+	at sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:1068)
+	at sun.security.ssl.SSLEngineImpl.readNetRecord(SSLEngineImpl.java:890)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:764)
+	at javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:624)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1097)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:968)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:902)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	... 28 more
+32255 [nioEventLoopGroup-3-2] ERROR NettyMQTTHandler  - Ugly error on networking
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLException: Received fatal alert: internal_error
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:442)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:351)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:351)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:351)
+	at io.moquette.server.netty.metrics.BytesMetricsHandler.channelRead(BytesMetricsHandler.java:47)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:351)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:359)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:129)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:651)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:574)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:488)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:450)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: javax.net.ssl.SSLException: Received fatal alert: internal_error
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:208)
+	at sun.security.ssl.SSLEngineImpl.fatal(SSLEngineImpl.java:1639)
+	at sun.security.ssl.SSLEngineImpl.fatal(SSLEngineImpl.java:1607)
+	at sun.security.ssl.SSLEngineImpl.recvAlert(SSLEngineImpl.java:1776)
+	at sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:1068)
+	at sun.security.ssl.SSLEngineImpl.readNetRecord(SSLEngineImpl.java:890)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:764)
+	at javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:624)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1097)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:968)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:902)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	... 28 more
+0    [main] INFO  Server  - Persistent store file: null
+218  [main] INFO  ResourceAuthenticator  - Loading password file config/password_file.conf
+1061 [main] INFO  NettyAcceptor  - Server binded host: 0.0.0.0, port: 1883
+1061 [main] INFO  NettyAcceptor  - Server binded host: 0.0.0.0, port: 8080
+1061 [main] INFO  DefaultMoquetteSslContextCreator  - Starting SSL using keystore at serverkeystore.jks
+1061 [main] INFO  DefaultMoquetteSslContextCreator  - jks not found in bundled resources, try on the filesystem
+1061 [main] INFO  DefaultMoquetteSslContextCreator  - Using C:\Users\zxy\workspace4eclipse\moquette\run\bin\serverkeystore.jks 
+1530 [main] INFO  NettyAcceptor  - Starting SSL on port 8883
+1530 [main] INFO  NettyAcceptor  - Server binded host: 0.0.0.0, port: 8883
+1530 [main] INFO  NettyAcceptor  - SSL websocket is disabled because there is no value in properties for key secure_websocket_port
+13197 [nioEventLoopGroup-3-1] INFO  ProtocolProcessor  - CONNECT for client <SSLClientTest>
+13228 [nioEventLoopGroup-3-1] INFO  ClientSession  - cleaning old saved subscriptions for client <SSLClientTest>
+13244 [nioEventLoopGroup-3-1] INFO  ProtocolProcessor  - Connection established
+13244 [nioEventLoopGroup-3-1] INFO  ProtocolProcessor  - CONNECT processed
+41490 [nioEventLoopGroup-3-1] ERROR NettyMQTTHandler  - Ugly error on networking
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1100)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:366)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:118)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:651)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:574)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:488)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:450)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+77968 [nioEventLoopGroup-3-2] INFO  ProtocolProcessor  - CONNECT for client <SSLClientTest>
+77968 [nioEventLoopGroup-3-2] INFO  ClientSession  - cleaning old saved subscriptions for client <SSLClientTest>
+77968 [nioEventLoopGroup-3-2] INFO  ProtocolProcessor  - Connection established
+77968 [nioEventLoopGroup-3-2] INFO  ProtocolProcessor  - CONNECT processed
+88099 [nioEventLoopGroup-3-2] ERROR NettyMQTTHandler  - Ugly error on networking
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1100)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:366)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:118)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:651)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:574)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:488)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:450)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+0    [main] INFO  Server  - Persistent store file: null
+202  [main] INFO  ResourceAuthenticator  - Loading password file config/password_file.conf
+1029 [main] INFO  NettyAcceptor  - Server binded host: 0.0.0.0, port: 1883
+1029 [main] INFO  NettyAcceptor  - Server binded host: 0.0.0.0, port: 8080
+1029 [main] INFO  DefaultMoquetteSslContextCreator  - Starting SSL using keystore at serverkeystore.jks
+1029 [main] INFO  DefaultMoquetteSslContextCreator  - jks not found in bundled resources, try on the filesystem
+1029 [main] INFO  DefaultMoquetteSslContextCreator  - Using C:\Users\zxy\workspace4eclipse\moquette\mqtt-example\server\bin\serverkeystore.jks 
+1138 [main] ERROR DefaultMoquetteSslContextCreator  - Can't start SSL layer!
+java.security.UnrecoverableKeyException: Cannot recover key
+	at sun.security.provider.KeyProtector.recover(KeyProtector.java:328)
+	at sun.security.provider.JavaKeyStore.engineGetKey(JavaKeyStore.java:138)
+	at sun.security.provider.JavaKeyStore$JKS.engineGetKey(JavaKeyStore.java:55)
+	at java.security.KeyStore.getKey(KeyStore.java:792)
+	at sun.security.ssl.SunX509KeyManagerImpl.<init>(SunX509KeyManagerImpl.java:131)
+	at sun.security.ssl.KeyManagerFactoryImpl$SunX509.engineInit(KeyManagerFactoryImpl.java:68)
+	at javax.net.ssl.KeyManagerFactory.init(KeyManagerFactory.java:259)
+	at io.moquette.server.DefaultMoquetteSslContextCreator.initSSLContext(DefaultMoquetteSslContextCreator.java:86)
+	at io.moquette.server.netty.NettyAcceptor.initialize(NettyAcceptor.java:109)
+	at io.moquette.server.Server.startServer(Server.java:167)
+	at io.moquette.server.Server.startServer(Server.java:143)
+	at io.moquette.server.Server.startServer(Server.java:132)
+	at io.moquette.server.Server.startServer(Server.java:89)
+	at io.moquette.server.Server.main(Server.java:70)
+1185 [main] ERROR NettyAcceptor  - Can't initialize SSLHandler layer! Exiting, check your configuration of jks
